@@ -45,7 +45,7 @@ local t=ExtendDataCopy("accumulator","warptorio-harvestportal-1",{name="warptori
 
 -- Credit to factorissimo2
 
-local F = "__warptorio2__";
+local F = "__warptorio2x__";
 
 require("circuit-connector-sprites")
 

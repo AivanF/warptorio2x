@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 7.7.2024
+  Changes:
+    - Patched by AivanF to allow extensibility by addon mods like WSEK: Warptorio + Space Exploration + optional Krastorio, so that you can teleport over planets from the Space Exploration universe! Without such addon mods, it's the same old good Warptorio, with the same default settings.
+    - Technical changes: added "adjust_map_settings" to prevent changing settings of different planets; "WarpBuildPlanet" now calls "warptorio2_provide_planet" from remote interfaces of other mods in attempt to retrieve a planet. Kind of Dependency Injection pattern which makes a software system more extandable.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.3.10
 Date: 8.5.2023
   Changes:

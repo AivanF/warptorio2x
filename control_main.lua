@@ -257,7 +257,10 @@ end)
 
 
 function warptorio.ApplyMapSettings()
-	local gmp=game.map_settings
+	if warptorio.setting("adjust_map_settings") ~= true then return end
+
+	local gmp = game.map_settings
+
 	gmp.pollution.diffusion_ratio = 0.105
 	gmp.pollution.pollution_factor = 0.0000001
 
@@ -350,7 +353,6 @@ events.on_config(function(ev) if(warptorio.Loaded)then return end
 
 	for k,v in pairs(warptorio.settings)do v() end
 
-	-- todo: warptorio.ApplyMapSettings()
 	for k,t in pairs(global.Harvesters)do
 		table.merge(t,table.deepcopy(warptorio.platform.harvesters[t.key]))
 		table.merge(t,table.deepcopy(warptorio.platform.HarvesterPointData))
@@ -846,7 +848,7 @@ function warptorio.Warpout(key)
 
 	local cp=warptorio.GetMainPlanet()
 	local cf=warptorio.GetMainSurface()
-	warptorio.WarpPreBuildPlanet(key)
+	warptorio.WarpPreBuildPlanet()
 	local f,w,frc=warptorio.WarpBuildPlanet(key)
 	warptorio.WarpPostBuildPlanet(w)
 
@@ -877,7 +879,7 @@ function warptorio.Warpout(key)
 end
 
 
-function warptorio.WarpPreBuildPlanet(key)
+function warptorio.WarpPreBuildPlanet()
 	global.warp_charge=0
 	global.warp_charging=0
 	global.votewarp={}
@@ -927,27 +929,47 @@ end
 
 function warptorio.WarpBuildPlanet(key)
 	local nplanet
-	if(key)then
-		nplanet=remote.call("planetorio","FromTemplate","warpzone_"..global.warpzone,key)
-	else
-		local vplanet=warptorio.GetMainPlanet()
-		local lvl=research.level("warptorio-reactor")
-		if(lvl>=8)then local wx=global.planet_target
-			if(wx=="home" or wx=="nauvis")then if(research.has("warptorio-homeworld"))then local hf=(wx=="nauvis" and game.surfaces.nauvis or global.floor.home.host)
-				if(warptorio.GetMainSurface()~=hf and math.random(1,100)<=warptorio.setting("warpchance"))then local hp=remote.call("planetorio","GetBySurface",hf) or {name="Nauvis"}
-					game.print({"warptorio.successful_warp"}) game.print({"warptorio.home_sweet_home",hp.name})
-					return hf,hp
+
+	for interface, functions in pairs(remote.interfaces) do
+		if functions["warptorio2_provide_planet"] then
+			nplanet = remote.call(interface, "warptorio2_provide_planet", {key=key})
+			game.print("Warptorio2 got reply from "..interface..": "..serpent.line(nplanet))
+			if type(nplanet) == "table" then
+				if nplanet.surface and nplanet.planet and type(nplanet.planet) == "table" then
+					return nplanet.surface, nplanet.planet, nplanet.force
 				end
-			end elseif(wx and math.random(1,100)<=warptorio.setting("warpchance"))then
-				nplanet=remote.call("planetorio","FromTemplate","warpzone_"..global.warpzone,wx)
-				if(nplanet)then game.print({"warptorio.successful_warp"}) end
 			end
 		end
-		if(not nplanet)then nplanet=remote.call("planetorio","SimplePlanetRoll","warpzone_"..global.warpzone,{zone=global.warpzone,prevplanet=vplanet}) end -- planetorio, modifiers={{"",stuff}})
 	end
-	if(research.has("warptorio-charting") or not nplanet.planet.desc)then game.print(nplanet.planet.name) end
-	if(nplanet.planet.desc)then game.print(nplanet.planet.desc) end
-	return nplanet.surface,nplanet.planet,nplanet.force
+
+	if key then
+		nplanet = remote.call("planetorio","FromTemplate","warpzone_"..global.warpzone,key)
+	else
+		local vplanet = warptorio.GetMainPlanet()
+		if research.level("warptorio-reactor") >= 8 then
+			local wx = global.planet_target
+			if wx=="home" or wx=="nauvis" then
+				if research.has("warptorio-homeworld") then
+					local hf = (wx=="nauvis" and game.surfaces.nauvis or global.floor.home.host)
+					if warptorio.GetMainSurface() ~= hf and math.random(1,100) <= warptorio.setting("warpchance") then
+						local hp = remote.call("planetorio","GetBySurface",hf) or {name="Nauvis"}
+						game.print({"warptorio.successful_warp"}) game.print({"warptorio.home_sweet_home",hp.name})
+						return hf, hp
+					end
+				end
+			elseif wx and math.random(1,100) <= warptorio.setting("warpchance") then
+				nplanet = remote.call("planetorio","FromTemplate","warpzone_"..global.warpzone,wx)
+				if nplanet then game.print({"warptorio.successful_warp"}) end
+			end
+		end
+		if not nplanet then
+			 -- planetorio, modifiers={{"",stuff}})
+			nplanet = remote.call("planetorio","SimplePlanetRoll","warpzone_"..global.warpzone,{zone=global.warpzone,prevplanet=vplanet})
+		end
+	end
+	if research.has("warptorio-charting") or not nplanet.planet.desc then game.print(nplanet.planet.name) end
+	if nplanet.planet.desc then game.print(nplanet.planet.desc) end
+	return nplanet.surface, nplanet.planet, nplanet.force
 end
 
 

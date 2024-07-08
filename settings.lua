@@ -68,7 +68,10 @@ data:extend(
 	{type="bool-setting",name="warptorio_biter_warping",order="aaf",
 	setting_type="runtime-global",default_value=false},
 
-	{type = "bool-setting", name = "warptorio_pollution_disable",order="abaa",
+	{type = "bool-setting", name = "warptorio_adjust_map_settings",order="abaaa",
+	setting_type = "runtime-global",default_value =true},
+
+	{type = "bool-setting", name = "warptorio_pollution_disable",order="abaab",
 	setting_type = "runtime-global",default_value =false},
 
 	{type = "int-setting", name = "warptorio_pollution_tickrate",order="abab",

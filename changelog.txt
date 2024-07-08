@@ -1,0 +1,988 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.3.10
+Date: 8.5.2023
+  Changes:
+    - Fixed crash when setting warp target to homeworld or nauvis.
+    - Fixed the Charting ability where the button wasnt adding to the hud and wasnt spawning invisible radars on the factory and boiler floors when the research finishes.
+    - Fixed two Typ"};o's in the Warptorio Lore messages (Thanks Honktown!)
+    - Fixed Warp Armor and Warp Accumulator tech icons (Thanks Knofbath!)
+    - Removed incompatibility flag with Rampant because Rampant now has multi-surface compatibility.
+    - Removed placeable-by on warp pipes to prevent accidental placement of them.
+    - Buffed Warponium Fuel Cells, they are now more accurately 4x more powerful than a typical uranium fuel cell as originally intended (Thanks Knofbath!)
+    - Buffed Stabilizer ability and rephrased its description for clarity
+    - Updated to Factorio 1.1.80
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.9
+Date: 5.7.2022
+  Changes:
+    - Fixed a bug with warp pre-charge speed upgrades where upgrading made pre-charging slower
+    - Fixed the harvester loaders bug + migration with help from community (Thank you!)
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.8
+Date: 8.4.2022
+  Changes:
+    - Typo
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.7
+Date: 7.4.2022
+  Changes:
+    - Lib bugfix related to cloning spider legs
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.6
+Date: 7.3.2022
+  Changes:
+    - Fixed green wire circuits not connecting between stairs + migration
+    - Fixed void tiles not being placed if the platform warps away without you
+    - Added fix for crashes related to warp loaders & filters with help from community (Thank you!)
+    - Teleporter gate now has flying text when logistics cannot be placed instead of a global message.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.5
+Date: 13.3.2021
+  Changes:
+    - Fixed multiplayer crash, missing nil check on updating ownership and connection of cloned spidertrons to the remotes in players inventories between warps.
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.4
+Date: 30.12.2020
+  Changes:
+    - Factorio 1.1.6
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.3
+Date: 3.12.2020
+  Changes:
+    - Factorio 1.1
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.2
+Date: 4.11.2020
+  Changes:
+    - Spidertron can now travel through stairs (cloning method)
+    - Fixed decoupling of spidertron remotes when warping/cloning
+    - You now remain in your spidertron when warping.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.1
+Date: 25.8.2020
+  Changes:
+    - Basic fixes for warp loaders
+    - Fixed spidertron being lost between warps
+    - Fixed a crash when using steel loader chests
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 8.8.2020
+  Changes:
+    - Fixed rails not being affected by logistics upgrades
+    - Made hazard tiles accurate and fixed hazard clearing crash
+    - typo causing crash on warp
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.9
+Date: 2.8.2020
+  Changes:
+    - Fixed invisible radars & homeworld/platform teleport capsules
+    - e (typo)
+    - v (typo)
+    - Buffed stabilizer to 5% of regular platform pollution
+    - Fixed ability drain % texts and added setting
+    - Turned on warp blacklists for harvesters (fixes some mod compatabilities)
+    - Factorio 0.18.40
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.8
+Date: 12.5.2020
+  Changes:
+    - Fixed a few bugs
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.7
+Date: 7.5.2020
+  Changes:
+    - Warptorio Expansion Update
+    - Large changes to remote interfaces
+    - Moved planet rng settings to planetorio
+    - Fixed changing loader directions mid-game (top/bottom halves)
+    - Fixed a bunch of harvester bugs
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.6
+Date: 13.4.2020
+  Changes:
+    - Factorio 0.18
+    - Added /kill command to suicide (if you get stuck on ocean planet)
+    - Added biter warping difficulty setting
+    - Added Nauvis to warp target list
+    - Added warp pipes to the Harvesters
+    - Full rework of platform tileing/upgrading system enabling the creation of multiple platform layouts.
+    - Full rework of planets system, exported to standalone library mod Planetorio enabling other mod makers to create new planets and use the planets/surfaces system for their own mods.
+    - Reworked Abilities: All abilities now use platform electricity (kept in the stairs) to function. Abilities are toggleable and drain energy over time. The amount drained is the same for all abilities, and it increases the longer abilities remain active. The amount of energy drained, and energy drain growth is applied for all abilities active at once (1x for 1 ability active, 3x for 3 abilities active). Drain amounts are based on a % of the total electrical storage capacity.
+    - Added a Platform Energy bar to the HUD showing electricity balance to help with using the new ability mechanics.
+    - Reworked Stabilizer Ability: Platform pollution, and pollution growth reduced to 25% while active.
+    - Reworked Radar Ability: Scans an outer ring every few seconds while active (takes longer each successive scan)
+    - Fixed a bug with warpchance setting not applying to homeworld rolls
+    - Fixed a bug with pollution not being removed from harvester floor
+    - Broke warp loaders
+    - Broke the Accelerator ability (it does nothing for now)
+    - Broke the warptorio remote interface (affects cross mod compatabilities)
+    - Broke functionality related to changing loader directions (top/bottom halves) upon the settings being changed mid-game
+    - Broke "unstuck" on platform entities, e.g. you can become trapped in teleporters as you unlock them.
+    - Broke hazard tile accuracy
+    - Probably broke more things.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.5
+Date: 13.11.2019
+  Changes:
+    - Harvester deploy typo x2 (?)
+    - Harvesters now ignore planet-side logistics/construction robots when deployed
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.4
+Date: 13.11.2019
+  Changes:
+    - Fixed a divide by zero error
+    - Harvester deploy typo (?)
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.3
+Date: 13.11.2019
+  Changes:
+    - Made "invisible" radars unminable
+    - Removed warpstation, warppipe and harvesters from circuit signals menu
+    - Added blacklists to harvesters
+    - Vehicles are now teleported between surfaces instead of cloned (AAI vehicles compatability). Not yet added to harvesters.
+    - Players are no longer teleported through platform teleporters if they are in a vehicle.
+    - Optimized teleporter code to save frames
+    - 10,000 Downloads Special: Compatibility with NewGamePlus courtesy of Bilka <3
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 31.10.2019
+  Changes:
+    - Added ability_used and ticktime to remote events
+    - Added remote functions to recall the harvesters and teleporter gate
+    - Added robots outside of platform carry between warps difficulty setting (disabled by default).
+    - Fix for harvesters being permanently lost
+    - Added Home Portal item that teleports you to homeworld
+    - Buffed warp module productivity bonus for consistency
+    - Added new remotes for mod managed tables
+    - Warp pipes are now automatically emptied if neither side is connected to another pipe
+    - Added sprite overlays to stairs to reduce confusion on where it will send you (alt-mode only)
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 10.10.2019
+  Changes:
+    - Harvesters now prevent players getting stuck when being deployed.
+    - Another loot chest typo
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 10.10.2019
+  Changes:
+    - Typos with loot chests
+    - Fixed harvesters "moving" players when recalled on warp
+    - Attempted fixes of harvester deploy bug
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.9
+Date: 10.10.2019
+  Changes:
+    - Fixed votewarp bug
+    - Updated logistics research descriptions
+    - Fixed warp pipe temperature bug
+    - Added SpawnLootChest to remote interface
+    - Added setting to turn on/off loot chests
+    - Fixed a crash related to clearing mod composite entities (eg. mini-loaders)
+    - Added some missing modifiers to the reach distance research
+    - Added Warp Striders research
+    - Made a few early researches require the reactor reassembly project
+    - Made a few other small research tweaks
+    - Added steel chest to Requester chest type settings
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.8
+Date: 2.10.2019
+  Changes:
+    - Attempted fixes of sound stacking problem
+    - Fixed platform turret warping alignment x2
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.7
+Date: 30.09.2019
+  Changes:
+    - Reduced cost of Warponium Fuel Cells
+    - Fixed teleporter sounds
+    - Fixed warp beacon (?)
+    - Changed warp pipe pipette
+    - Fixed player leave/join affecting votewarp
+    - Increased default votewarp fraction to 0.51 and now rounds up. (2 players in MP requires both players to vote before warping)
+    - Fixed platform turret warping alignment issue
+    - Fixed factory floor early research tile alignment issue
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: 30.09.2019
+  Changes:
+    - Fixed nauvis map gen settings not applying to uncharted planets and added copy_nauvis planet modifier.
+    - Fixed hazard tile indicator accuracy for stairs
+    - Fixed a bug with harvester recall and overlapping belts/entities being destroyed
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 30.09.2019
+  Changes:
+    - Made rotation checks more efficient
+    - Fixed Warp Rail logistics not being removed from blueprints.
+    - Fixed blueprints created from hotbar not being affected by blueprint checks.
+    - Mod Compatability attempted AAI Vehicles fixes
+    - Added toolbar and relating research for easy harvester and mobile gate pickup by popular demand
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 29.09.2019
+  Changes:
+    - Added "P" Planet Clock timer to Warp Combinator
+    - Added separate setting to disable biter waves (previously disabled under base expansion rate tickbox)
+    - Fix for harvester migration issue x3
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 29.09.2019
+  Changes:
+    - Fixed red X's in power statistics
+    - Made factory beacon research a bit more expensive
+    - Nerfed platform solar power by popular demand and added a difficulty setting
+    - Fix for harvester migration issue x2
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 29.09.2019
+  Changes:
+    - Fixed bug with abilities not resetting on warp
+    - Attempted more fixes of multiplayer votewarp
+    - Added some locale to Warp Reactor research level 6 and 8
+    - Fixed planet target dropdown unlocking early.
+    - Fix of harvester loaders migration issue
+    - Picking up harvesters now prevents inventory duplicates
+    - Tweaked sorting of harvester items and research (left is now on the left)
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 29.09.2019
+  Changes:
+    - Migration error x2
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 28.09.2019
+  Changes:
+    - Migration error
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 28.09.2019
+  Changes:
+    - Attempted fix of loader and boiler floor access migration issues
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 27.09.2019
+  Changes:
+    - Cleaned entity spam from circuit signals menu
+    - Mod compatability with Spell Pack
+    - Fixed Warp Loaders (old saves may need to rotate them to refresh/update)
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 26.09.2019
+  Changes:
+    - Planet API bugfix
+    - Removed some debug code
+    - Fixed migration power bug
+    - Fixed Warp Combinator alignments and bug with offset setting not applying
+    - Fixed Harvester alignment bug + tile migration
+    - Fixed bug with Harvester Combinators not moving for size upgrades
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 25.09.2019
+  Changes:
+    - Removed unused hazard tiles
+    - Moved Harvester Floor between boiler and factory, and adjusted research to match.
+    - Fixed Warp Accumulator recipe and item
+    - Fixed "Invisible" Radar being hidden by factory beacon/boiler substation upgrades
+    - Fixed minor factory floor misalignments + tile migration
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 22.09.2019
+  Changes:
+    - Fixed crash related to new blueprints thing
+    - Added Warp Combinators and related research
+    - Added Harvester Combinators and related research
+    - Fixed factory giga floors alignments + tile migration
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 22.09.2019
+  Changes:
+    - Fixed bug with teleporter gate not receiving power upgrades if logistics is blocked when it's placed
+    - Planet teleporter gate must now be rebuilt for logistics and loader upgrades to apply (prevents problems related to clearing space)
+    - Added fix for loader filters being lost between logistics and loader upgrades
+    - Fixed bug with players being moved between warps
+    - Fixed clearing bug with platform turrets
+    - Platform Structures are now removed from blueprints. This is potentially conflicting so there is a setting to disable this.
+    - New warptorio event handling. See remote.get_events() and remote.get_event(name).
+
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 21.09.2019
+  Changes:
+    - Added a bunch of remote api events for future implementation and slightly adjusted naming of existing ones.
+    - Fixed harvester logistics research crash
+    - Fixed boiler floor, water and giga alignment issues + tile migration.
+    - Mod Compatability bugfix for ModMash
+    - Fixed tile migrations clearing harvesters
+    
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 18.09.2019
+  Changes:
+    - Fixed west harvester bugs
+    - Fixed east harvester loaders research bug
+    - Fixed boiler giga floor bridge alignment bugs
+    - Fixed bug with level 0 (entry) platform turret research not placing tiles on planet
+    - Fixed bug with harvester logistics not clearing space for loaders correctly
+    - Fixed boiler water alignment bugs
+    - Added tile migration. Saves may take a while to load.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 17.09.2019
+  Changes:
+    - Fixed beacon issues
+    - Fixed carebear chest
+    - Attempted fix of logistics research occasional crash
+    - New thumbnail.png
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 15.09.2019
+  Changes:
+    - Fixed clearing alignment bug of platform circles
+    - Added migration to recall harvesters aiming to fix loader and alignment issues
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.9
+Date: 15.09.2019
+  Changes:
+    - Fixed issue with reactor upgrade destroying teleporter
+    - Fixed bug with planet teleporter gate not using energy upgrades
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.8
+Date: 15.09.2019
+  Changes:
+    - Fixed sizing bug for platform circles
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: 15.09.2019
+  Changes:
+    - Fixed typos with carebear chest
+    - Adjusted size of harvester platform borders
+    - Added (up to) 3 loaders to the harvester platforms which are always connected to harvester floor.
+    - Harvesters are now recalled when the interior portal is mined (if deployed)
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.6
+Date: 13.09.2019
+  Changes:
+    - Fixed harvester pickup portal bug
+    - More typos
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.5
+Date: 12.09.2019
+  Changes:
+    - More typos
+    - Attempted fix of harvester recall crash
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.4
+Date: 12.09.2019
+  Changes:
+    - Fixed typos with pipe logistics and warpout
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.3
+Date: 12.09.2019
+  Changes:
+    - More typos
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: 11.09.2019
+  Changes:
+    - Fix for pipe logistics issue
+    - More typo fixes
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: 11.09.2019
+  Changes:
+    - (Hopefully) fixed a crash relating to fluids
+    - Added fix for migration bug relating to power between floors
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.9.0
+Date: 11.09.2019
+  Changes:
+    - Harvester Platforms now spawn on top of resources instead of transferring them to the harvester floor
+    - Harvester Platforms will now recall players on them if they're deployed when warping.
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.9
+Date: 11.09.2019
+  Changes:
+    - Fixed typos breaking planet packs and alien biomes.
+    - Fixed typo with boiler research
+    - Fixed typo with autowarp timer
+    - Added a bunch of various functions to the remote interface.
+    - Attempted fixes to votewarp for multiplayer (untested)
+    - Fixed homeworld button
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.8
+Date: 10.09.2019
+  Changes:
+    - Massive re-write and code cleanup
+    - Fixed bugs related to multiple planets (eg. homeworld plus platform) with special chunk generation functions interfering with eachother, particularly for multiplayer.
+    - Tri-loader now adds an extra belt pair to ALL stairs, making the central stairs have 6 belts instead of 4.
+    - New Harvester Floor below the boiler and a new relating gameplay mechanic.
+    - Made a bunch of things use locale for translation later
+    - Fixed the teleporter logistics blocked message on warp
+    - Moved first boiler room water research to blue science
+    - Fixed water placement bugs
+    - Made platform "turrets" research a bit cheaper, and moved the first level to green science.
+    - Broke Warp Loaders
+    - Slightly adjusted alignment of warp rails
+    - Made warp charge timer (entity counter thing) ignore surface/planet entities
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.7
+Date: 26.08.2019
+  Changes:
+    - Added sound to warp button and a message for multiplayer
+    - Fixed a bug with planet selector
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.6
+Date: 24.08.2019
+  Changes:
+    - More pollution nerfs
+    - Added pollution exponent multiplier setting
+    - Added pollution tick rate setting
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.5
+Date: 22.08.2019
+  Changes:
+    - Teleporter hitbox adjustments
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.4
+Date: 22.08.2019
+  Changes:
+    - Mod Compatability: Von Neumann Mod. Please use v0.0.3 that i have posted if you wish to play that mod with this one: https://github.com/abaines/Von-Neumann/issues/1
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.3
+Date: 22.08.2019
+  Changes:
+    - Leftover test code
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.2
+Date: 22.08.2019
+  Changes:
+    - Full mod compatability: Force Fields 2 - https://mods.factorio.com/mod/ForceFields2
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: 22.08.2019
+  Changes:
+    - Fixed a bug with the Stone planet
+    - Review for multiplayer planet selection drop-down bug
+    - Mod Compatability: Added remote interface for other mods to prevent certain entities from being cloned by name
+
+---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+Date: 21.08.2019
+  Changes:
+    - Fixed a bug with circuits and loader chests
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.9
+Date: 21.08.2019
+  Changes:
+    - New Planet: Smog Planet
+    - New Planet: Mirror Planet
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.8
+Date: 21.08.2019
+  Changes:
+    - Mod Compatability: Alien Biomes - bug fixing
+    - More pollution nerfs (reset settings in existing saves)
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.7
+Date: 20.08.2019
+  Changes:
+    - Nerfed Pollution Factor
+    - Fixed a bug with autowarp on/off
+    - New Planet Expansion Pack: DangOreus Planet
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.6
+Date: 19.08.2019
+  Changes:
+    - Waterless, Biter, and "Rest" Planets can no longer occur twice in a row respectively.
+    - Moved the first teleporter research into it's own research
+    - Mod Compatability: Big Brother radars
+    - Mod Compatability: Alien Biomes - Fixed a bug with water not spawning on planets
+    - Mod Compatability: Alien Biomes - Fixed a multiplayer desync issue
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.5
+Date: 17.08.2019
+  Changes:
+    - Fixed a bug with the warp target dropdown in multiplayer
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+Date: 17.08.2019
+  Changes:
+    - Added more mod remote commands
+    - Added tile overrides to disable certain tiles unless otherwise enabled.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.3
+Date: 17.08.2019
+  Changes:
+    - migration issues
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+Date: 17.08.2019
+  Changes:
+    - More bug fix
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+Date: 17.08.2019
+  Changes:
+    - Progress on mod compatability Alien Biomes
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 17.08.2019
+  Changes:
+    - Fixed gui not updating on autowarp settings changes
+    - Added a fix to make spawn area resources spawn further away from the platform as it gets bigger (this apparently did nothing)
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.9
+Date: 17.08.2019
+  Changes:
+    - Mod setting for %chance of landing on selected planet
+    - Added Warp Portal item
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.8
+Date: 17.08.2019
+  Changes:
+    - Fixed a bug with the warp charge timer
+    - Fixed a bug with the planets gui dropdown
+    - Fixed missing ocean planet description
+    - Planets API tweaks
+    - Fixed player corpse between warps
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.7
+Date: 15.08.2019
+  Changes:
+    - Added fix for dropped items being lost on warp
+    - More 0.6.5 typos
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.6
+Date: 15.08.2019
+  Changes:
+    - Added missing multiplier for original map settings starting_area and water
+    - 0.6.5 typo
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 15.08.2019
+  Changes:
+    - Fixed a big with picking up warp heatpipes
+    - Fixed a bug with the early boiler room water setting not working when starting a new map with it enabled (migration for this is done too)
+    - Added checks to ensure resource specific planets are not spawned if a mod is added that removes base game resources.
+    - Fixed a bug with modded ores not appearing on any planets
+    - Fixed interactions with Factorissimo2
+    - More progress on Alien Biomes compatability (trees and such should spawn now). It should only spawn nauvis-like planets currently.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: 12.08.2019
+  Changes:
+    - Fixed typos in 0.6.3
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+Date: 12.08.2019
+  Changes:
+    - Temporarily disabled loader mod detection
+    - Re-wrote the planet generator with improved mod compatability and improved api
+    - Tweaked a bunch of planet generation settings
+    - Added Uncharted planet
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.2
+Date: 12.08.2019
+  Changes:
+    - Added mod compatability: Mods that introduce new/faster loaders will replace the existing platform loaders at logistics level 4. Exception: miniloaders
+    - Prep for mod compatible planet generator update
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 11.08.2019
+  Changes:
+    - Fixed a crash related to Alien Biomes
+
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 10.08.2019
+  Changes:
+    - Bug Fix
+    - More progress on mod compatability: Alien Biomes
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.9
+Date: 10.08.2019
+  Changes:
+    - Completed Mod Extendable Planets.
+    - Official Warptorio2 Planet Pack: https://mods.factorio.com/mod/warptorio_planet_pack
+    - Progress on mod compatability: Alien Biomes.
+    - Progress on mod compatability for modded ores
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.8
+Date: 10.08.2019
+  Changes:
+    - Added Biter Waves, ensuring biter attacks always happen
+    - Added Biter Wave difficulty settings
+    - Added a tiny bit of pollution to everything (such as chests, inserters)
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.7
+Date: 10.08.2019
+  Changes:
+    - Adjusted spawn settings of the Barren planet
+    - Added Rogue planet
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+Date: 10.08.2019
+  Changes:
+    - Added votewarp multiplier mod setting
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 10.08.2019
+  Changes:
+    - Added nauvis_override to the modded planet api
+    - Added votewarp for multiplayer (untested)
+    - Reversed direction of logistics on north half of platform.
+    - Added mod settings allowing you to set the direction of platform logistics (north and south halves)
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: 10.08.2019
+  Changes:
+    - Full factorissimo mod support
+    - Fixed a bug with the southeast and southwest warp rails
+    - Fixed a bug with corner stairs not benefiting from stairs energy research
+    - Known Issue: Multiplayer Desync related to cloning accumulators. This is a factorio bug: https://forums.factorio.com/viewtopic.php?f=7&t=74363
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: 09.08.2019
+  Changes:
+    - Minor bug fixing
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 09.08.2019
+  Changes:
+    - Minor bug fix
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 09.08.2019
+  Changes:
+    - Minor bug fix
+
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 09.08.2019
+  Changes:
+    - Added expert difficulty mod setting: autowarp is always on
+    - Added more mod settings for pollution factor and biter expansion rates
+    - Small nerf to biter expansion rates
+    - Added auto warp time mod setting
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.9
+Date: 09.08.2019
+  Changes:
+    - More work on remote interface for other mods to expand the warptorio planets table. Please refer to FAQ.
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.8
+Date: 09.08.2019
+  Changes:
+    - Mod compatability with Dirt Path
+    - Added remote interface for other mods to expand the warptorio planets table
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.7
+Date: 09.08.2019
+  Changes:
+    - Added mod settings weighted planet probability of occurrence
+    - Fixed a crash related to loot chests
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+Date: 09.08.2019
+  Changes:
+    - Added carebear difficulty mod setting: Early boiler room water
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: 08.08.2019
+  Changes:
+    - Added carebear difficulty mod setting: spawns a loot chest of items you'll need to get you through the first few planets alive for those that need help.
+    - Reduced base autowarp timer to 20 mins to better match biter evolution in the early game.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: 08.08.2019
+  Changes:
+    - General code cleanup and organising
+    - Added mod setting to turn off autowarp earlier than reactor level 6.
+    - Added mod settings to change warp charge time calculations and ability cooldowns.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: 06.08.2019
+  Changes:
+    - Fixed mp issue
+    - Added more provider chest options
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 06.08.2019
+  Changes:
+    - Miniaturized the "invisible" radar.
+    - Added mod settings allowing selection of requester/provider chests used with teleporter and stairs loaders.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 06.08.2019
+  Changes:
+    - Fixed a bug with warp rail loaders and chests not switching direction
+
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 06.08.2019
+  Changes:
+    - Reduced warp charge time growth
+    - Fixed a bunch of sizing and alignment issues
+    - Big code cleanup intended for improved mod compatability, performance and reliability.
+    - Reactor research tweaks
+    - Invisible radar to factory and boiler floors (requires charting).
+    - Fixed a multiplayer crash
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 06.08.2019
+  Changes:
+    - Fixed missing beacon levels
+    - Fixed some lag issues when staying on a planet for too long
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 05.08.2019
+  Changes:
+    - Added crash protection for mods that remove base game resources
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 04.08.2019
+  Changes:
+    - Fixed a bug with reactor removing itself between warps
+    - Fixed factory beacon placement issues
+    - Added changelog formatting for in-game viewing
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 04.08.2019
+  Changes:
+    - Slightly reduced final platform size upgrade
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 04.08.2019
+  Changes:
+    - More research tweaks
+    - Fixed a crash caused by even distribution mod
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 2019.08.03
+  Changes:
+    - Added homeworld
+    - Tweaked beacon research
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 03.08.2019
+  Changes:
+    - Pumps are now correctly removed from platform between warps
+    - Removed additional stairs belts, max is now 4.
+    - New space science: Warp Loaders.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 03.08.2019
+  Changes:
+    - Fixed bug with giga boiler floors unlocking early
+    - Reduced cost of research
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 01.08.2019
+  Changes:
+    - Added caching for warp accumulators and heatpipes to save frames
+    - Added missing purple science packs to logistics research
+    - Fixed sizing and alignment of boiler giga floors
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 01.08.2019
+  Changes:
+    - Tweaked occurrence rate and zones of planets
+    - More pollution tweaks
+    - Tweaked axe speed, physical damage and warp beacon research
+    - Fixed random deaths when warping while you're standing on the edge of the platform
+    - Planets will now correctly copy settings from original map generation.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.9
+Date: 31.07.2019
+  Changes:
+    - Added Warp Accumulators
+    - Further tweaks to pollution settings
+    - Added alarm to auto-warp
+    - fixed logistics bots between warps
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.8
+Date: 30.07.2019
+  Changes:
+    - Added some vanilla bullet damage upgrades
+    - Tweaked initial and stabilizer pollution settings
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.7
+Date: 29.07.2019
+  Changes:
+    - Tweaked the Polluted planet
+    - Added Dwarf Planet
+    - Changed some planet descriptions
+    - Fixed a bug with logistics chests not functioning correctly between floors
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.6
+Date: 29.07.2019
+  Changes:
+    - Reduced warp multipliers for end game planets
+    - Tweaked resource spawning on specialized planets and disabled spawn area resource removal
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 27.07.2019
+  Changes:
+    - Fixed a bug with placing the teleporter gate causes the platform teleporter chests to empty
+    - Slightly reduced warp robot speed bonus
+    - Fixed a bug with dual loader research not applying to boiler floor
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 27.07.2019
+  Changes:
+    - Fixed a bug with upgrading energy causing loss of logistics in boiler room.
+    - Made early game research slightly more expensive
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 27.07.2019
+  Changes:
+    - Mic Drop
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 27.07.2019
+  Changes:
+    - Major Branch split from warptorio_0.2.1. Credit to Nonoce https://mods.factorio.com/mod/warptorio
+    - Updated everything
+    - Fixed everything
+    - Finished everything
+    - Polished everything
+    - Added a whole bunch of new stuff
+    - Made sure that new stuff worked properly as ideally as possible.
